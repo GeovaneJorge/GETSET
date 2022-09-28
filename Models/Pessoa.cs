@@ -22,10 +22,10 @@ namespace Explorando.Models
             if (value == "")
             {
                 //Tratamento se o usuario deixar o nome em branco  o progrma fecha
-                throw new ArgumentException("O nome não pode ser vazio.");
+                throw new ArgumentException("O nome não pode ser vazio .");
             }
 
-            _nome = value;
+            _nome = value;  
            } 
 
         }
