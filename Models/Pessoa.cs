@@ -8,6 +8,7 @@ namespace Explorando.Models
     public class Pessoa
     {
         private string _nome;
+        private int _idade;
 
         public string  Nome 
         {
@@ -20,6 +21,7 @@ namespace Explorando.Models
            {
             if (value == "")
             {
+                //Tratamento se o usuario deixar o nome em branco  o progrma fecha
                 throw new ArgumentException("O nome não pode ser vazio.");
             }
 
@@ -28,7 +30,27 @@ namespace Explorando.Models
 
         }
 
-        public int Idade {get; set;}
+        
+
+        public int Idade
+        {
+           get =>_idade;
+
+            set
+            {
+               if (value < 0)
+               {
+                    //Tratamento se o usuario colocar uma idade menor que 0 o progrma fecha
+                    throw new ArgumentException("Idade não pode ser menor que 0");
+
+               } 
+
+               _idade = value;
+            }
+
+        }
+         
+
 
         public void Apresentar()
         {
