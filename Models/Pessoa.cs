@@ -7,6 +7,16 @@ namespace Explorando.Models
 {
     public class Pessoa
     {
+         public Pessoa()
+        {
+
+        }
+        public Pessoa(string nome)
+        {
+            Nome = nome;
+        }
+
+
         private string _nome;
         private int _idade;
 
